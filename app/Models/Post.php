@@ -23,8 +23,9 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function user()
+    // kita bisa ganti dari user jadi author
+    public function author()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
