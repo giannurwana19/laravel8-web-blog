@@ -25,12 +25,11 @@ Route::get('/about', function () {
         'name' => 'Gian Nurwana',
         'email' => 'giannurwana19@gmail.com',
         'image' => 'avatar.png'
-]);
+    ]);
 });
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
-
 
 Route::get('/categories', function () {
     return view('categories', [
