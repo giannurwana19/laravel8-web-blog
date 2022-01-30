@@ -19,7 +19,7 @@ class PostController extends Controller
         }
 
         if (request('author')) {
-            $author = User::firstWhere('slug', request('author'));
+            $author = User::firstWhere('username', request('author'));
             $title = " by $author->name";
         }
 
